@@ -45,7 +45,7 @@ import com.example.gkrinker.sunny.data.WeatherContract.WeatherEntry;
 
 
 /**
- * A placeholder fragment containing a simple view.
+ * Main Fragment holding ListView with Forecasts.
  */
 public class ForecastFragment extends Fragment implements android.support.v4.app.LoaderManager.LoaderCallbacks<Cursor> {
 
