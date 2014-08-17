@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gkrinker.sunny"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.gkrinker.sunny.MyActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.gkrinker.sunny.DetailActivity"
+            android:label="@string/title_activity_detailed"
+            android:parentActivityName="com.example.gkrinker.sunny.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gkrinker.sunny.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.gkrinker.sunny.SettingsActivity"
+            android:label="@string/title_settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gkrinker.sunny.MyActivity" />
+        </activity>
+
+        <provider
+            android:name="com.example.gkrinker.sunny.data.WeatherProvider"
+            android:authorities="com.example.gkrinker.sunny" />
+    </application>
+
+</manifest>
